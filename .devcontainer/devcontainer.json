@@ -1,19 +1,14 @@
 {
   "name": "Android Java Lab",
   "image": "mcr.microsoft.com/devcontainers/universal:2",
-  "features": {
-    "ghcr.io/devcontainers/features/java:1": {
-      "version": "17",
-      "jdkDistro": "ms"
-    }
-  },
-  "onCreateCommand": "bash .devcontainer/setup.sh",
   "customizations": {
     "vscode": {
       "extensions": [
         "vscjava.vscode-java-pack",
-        "naco-siren.gradle-language"
+        "naco-siren.gradle-language",
+        "adelphes.android-dev-ext"
       ]
     }
-  }
+  },
+  "postCreateCommand": "echo 'Ambiente pronto. Lancia: ./setup-android-project.sh'"
 }
